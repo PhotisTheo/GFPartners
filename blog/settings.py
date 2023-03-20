@@ -1,11 +1,9 @@
 import django
 import os
 from pathlib import Path
-from django.utils.encoding import smart_str
 import dj_database_url
 from decouple import config
 
-django.utils.encoding.smart_text = smart_str
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +18,7 @@ SECRET_KEY = 'django-insecure-c-lhg5&j7zpav6r!r604sr_==$_b&5maq2n+_szhxkql&=v4qj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
