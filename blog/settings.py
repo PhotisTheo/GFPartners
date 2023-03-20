@@ -20,8 +20,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ['web-production-7af6.up.railway.app']
-
 
 # Application definition
 
@@ -74,8 +72,12 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'RzVpfsJzxSdk0o8jyCKw',
+        'HOST': 'containers-us-west-122.railway.app',
+        'PORT': '6174',
     }
 }
 
